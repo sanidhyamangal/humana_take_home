@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "humana-take-home"
+version = "0.1.0"
+description = "Package to complete Humana take home evaluation"
+authors = ["Sanidhya Mangal <mangalsanidhya19@gmail.com>"]
+readme = "README.md"
+packages = [{from="src", include="humana_take_home"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+llama-index-llms-ollama = "^0.5.4"
+llama-index = "^0.12.34"
+dotenv = "^0.9.9"
+llama-index-embeddings-huggingface = "^0.5.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
