@@ -7,11 +7,13 @@ readme = "README.md"
 packages = [{from="src", include="humana_take_home"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "3.10.5"
 llama-index-llms-ollama = "^0.5.4"
 llama-index = "^0.12.34"
 dotenv = "^0.9.9"
 llama-index-embeddings-huggingface = "^0.5.3"
+spacy = "^3.8.5"
+streamlit = "^1.45.0"
 
 
 [tool.poetry.group.dev.dependencies]

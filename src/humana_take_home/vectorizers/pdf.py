@@ -96,3 +96,7 @@ class PDFDataLoader:
         logger.info(
             f"Flushed vector index @ {persist_path} in {persist_timer.exec_time / 60}mins "
         )
+
+    def merge_new_documents(
+        self, input_dir: str | None = None, input_files: str | list[str] | None = None
+    ) -> t.Any: ...
