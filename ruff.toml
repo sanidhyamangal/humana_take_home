@@ -1,0 +1,10 @@
+src = ["src"]
+target-version = "py310"
+
+line-length=120
+[lint]
+select = ["E", "F", "W","I"]
+
+[format]
+indent-style="space"
+quote-style="single"

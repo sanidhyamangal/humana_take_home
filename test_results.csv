@@ -1,0 +1,55 @@
+question,ground_truth,response,score
+How many tumors were evaluated in intitial survey?,103 tumors evaluated in the initial survey,"103 tumors were evaluated in the initial survey (Slamon et al., SCIENCE 1987, page 4).",4.0
+What was the analysis from table 1?,"This analysis showedthat 4/34
+(11%) ofpatients with no involved nodes, 2/20 (10%) with 1 to 3
+involved nodes, and 8/25 (32%) with >3 involved nodes had gene
+amplification (P= 0.11). Ifthese data wereexamined bycomparing
+0 to 3 positive nodes versus >3positive nodes, the correlation with
+gene amplification became more significant (P < 0.05)."," The analysis from Table 1 in the document indicates that there was essentially no correlation between gene amplification and estrogen receptor status, progesterone receptor status, size of tumors, or age at diagnosis among the 103 tumors evaluated in the initial survey. However, when analyzing for association between HER-2/neu amplification and number of positive mph nodes, a trend was noted. This analysis showed that 4 out of 34 (11%) patients with no involved nodes, 2 out of 20 (10%) with 1 to 3 involved nodes, and 8 out of 25 (32%) with >3 involved nodes had gene amplification (P= 0.11). If the data were examined by comparing 0 to 3 positive nodes versus >3 positive nodes, the correlation with gene amplification became more significant (P<0.05). Thus, there was a significant increase in the incidence of HER-2/neu gene amplification in patients with >3 axillary lymph nodes involved with disease.
+
+Reference: SlamonetalSCIENCE1987.pdf, page 5",4.0
+What are major prognostic factors for breast cancer?,"The major prognostic factors for
+breast cancer include presence or absence oftumor in the axillary
+nodes, size of the primary tumor, and presence or absence of
+hormonal receptors (29). ","1. Tumor Size (Fig. 1): Larger tumors are generally more aggressive and have a higher risk of recurrence (BIOM 255, pg. 3).
+
+2. Lymph Node Status (Fig. 1): If the cancer has spread to the lymph nodes, it is more likely to have spread elsewhere in the body (BIOM 255, pg. 3).
+
+3. Grade of Cancer Cells: The grade refers to how abnormal the cancer cells look under a microscope. High-grade tumors are more aggressive than low-grade tumors (BIOM 255, pg. 3).
+
+4. Hormone Receptor Status (Fig. 1): If the cancer cells have estrogen receptors (ER+) and/or progesterone receptors (PR+), they may respond to hormonal therapy. ER- and PR- cancers are more aggressive (BIOM 255, pg. 3).
+
+5. Human Epidermal Growth Factor Receptor 2 (HER2) Status (Fig. 1): If the cancer cells have too much HER2, it is considered HER2-positive. These cancers tend to grow faster and are more likely to spread (BIOM 255, pg. 3).
+
+6. Age at Diagnosis: Younger women (under 50 years old) generally have a higher risk of aggressive breast cancer (BIOM 255, pg. 3).
+
+7. Molecular Subtype (Fig. 1): Breast cancers can be classified into different subtypes based on their gene expression profile, such as Luminal A, Luminal B, HER2-enriched, and Basal-like. Each subtype has a different prognosis and responds differently to treatments (BIOM 255, pg. 3).
+
+8. Ki-67 Index: This is a measure of the number of cells in a tumor that are actively growing or dividing. A higher Ki-67 index indicates a more aggressive cancer (not explicitly mentioned in the provided context, please refer to original paper for details).
+
+9. Margin Status (not explicitly mentioned in the provided context, please refer to original paper for details): If cancer cells are found at the edge of the removed tissue (positive margin), it may indicate that all of the cancer was not removed, increasing the risk of recurrence.
+
+10. Tumor Location (not explicitly mentioned in the provided context, please refer to original paper for details): Cancer in the upper outer quadrant of the breast is associated with a higher risk of recurrence.
+
+11. Oncotype DX Score (not explicitly mentioned in the provided context, please refer to original paper for details): This is a test that measures the activity of 21 genes in a tumor sample to predict the likelihood of recurrence and response to chemotherapy in ER+, node-negative breast cancers.
+
+12. Genomic Health's Breast Recurrence Score (BRS) (not explicitly mentioned in the provided context, please refer to original paper for details): Similar to Oncotype DX, BRS uses a 21-gene expression assay to estimate the risk of distant recurrence in ER+, node-negative breast cancer patients.
+
+13. PAM50 Subtyping (not explicitly mentioned in the provided context, please refer to original paper for details): This is another gene expression-based test that classifies breast cancers into five subtypes (Luminal A, Luminal B, HER2-enriched, Basal-like, and Normal Breast-like) to help guide treatment decisions.
+
+14. Circulating Tumor Cells (CTCs) (not explicitly mentioned in the provided context, please refer to original paper for details): The presence of CTCs in the bloodstream can indicate a higher risk of recurrence or metastasis.
+
+15. Inflammatory Breast Cancer (not explicitly mentioned in the provided context, please refer to original paper for details): This is a rare and aggressive form of breast cancer characterized by inflammation of the breast, often due to blockage of lymph vessels by tumor cells. It has a poor prognosis.
+
+(BIOM 255 refers to the provided context)",4.0
+what are four genera of picornaviruses?,"(i) cardioviruses, such as encephalomyocarditis virus
+(EMCV),Theiler's murine encephalitis virus, andMengovirus; (ii)
+enteroviruses, such as poliovirus, hepatitis Avirus, and Coxsackie
+virus; (iii) aphthoviruses, such as foot-and-mouth disease viruses
+(FMDV); and (iv) rhinoviruses, of which there are about 100
+serotypes. "," The document provided mentions four genera of picornaviruses: (i) cardioviruses, such as Mengo virus; (ii) enteroviruses, such as poliovirus; (iii) aphthoviruses, such as foot-and-mouth disease viruses (FMDV); and (iv) rhinoviruses.
+
+Reference: SlamonetalSCIENCE1987.pdf, page 3
+
+If you need more information about the specific viruses within these genera or other details about picornaviruses, I would recommend reading the full document for a comprehensive understanding.",4.0
+What proties are present in Mengo virus?,"For Mengo virus, the proteins consist of277, 256, 231, and 70 amino acids, respectively."," The Mengo virus has four proteins: VP1, VP2, VP3, and VP4. Each composed of a single copy with approximate relative molecular masses of 34,000, 30,000, 25,000, and 7,000 daltons, respectively. For Mengo virus, the proteins consist of 277, 256, 231, and 70 amino acids, respectively (SlamonetalSCIENCE1987.pdf: page_label: 8).",4.0
