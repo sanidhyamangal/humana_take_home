@@ -4,17 +4,20 @@ from dataclasses import dataclass
 from humana_take_home.vectorizers.pdf import PDFDataLoader
 
 
-def main(
-    vector_path: str, input_dir: str | None, input_files: str | list[str] | None
-) -> None:
+def main(vector_path: str, input_dir: str | None, input_files: str | list[str] | None) -> None:
+    """runner function to vectorize documents into text embeddings.
+
+    Args:
+        vector_path (str): path to flush vectorized indexes
+        input_dir (str | None): path to the directory containing documents
+        input_files (str | list[str] | None): list of files to vectorize
+    """
     pdf_dataloader = PDFDataLoader(vector_index_path=vector_path)
 
-    pdf_dataloader.build_vector_index(
-        input_dir=input_dir, input_files=input_files, persist_index_path=vector_path
-    )
+    pdf_dataloader.build_vector_index(input_dir=input_dir, input_files=input_files, persist_index_path=vector_path)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
     @dataclass
     class CommandLineArgs:
@@ -22,14 +25,10 @@ if __name__ == "__main__":
         input_files: str | list[str] | None
         vector_path: str
 
-    argparser = ArgumentParser("vectorize documents into text embeddings")
-    argparser.add_argument(
-        "--input_dir", help="directory path to index all the documents", required=False
-    )
-    argparser.add_argument(
-        "--input_files", help="list of files to index", nargs="*", required=False
-    )
-    argparser.add_argument("--vector_path", help="path to flush vectorized indexes")
+    argparser = ArgumentParser('vectorize documents into text embeddings')
+    argparser.add_argument('--input_dir', help='directory path to index all the documents', required=False)
+    argparser.add_argument('--input_files', help='list of files to index', nargs='*', required=False)
+    argparser.add_argument('--vector_path', help='path to flush vectorized indexes')
 
     args = CommandLineArgs(**vars(argparser.parse_args()))
 

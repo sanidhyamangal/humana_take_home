@@ -13,10 +13,16 @@ logger = getLogger(__name__)
 
 
 class ResearchAgent:
-    def __init__(
-        self, vector_index: VectorStoreIndex, similarity_top_k: int = 3
-    ) -> None:
-        self.model_name = os.getenv("MODEL_NAME")
+    """Agent to query the research paper using vector index."""
+
+    def __init__(self, vector_index: VectorStoreIndex, similarity_top_k: int = 3) -> None:
+        """constructor to initialize the agent with vector index and chat engine.
+
+        Args:
+            vector_index (VectorStoreIndex): vector index to query the research paper.
+            similarity_top_k (int, optional): Number of nodes to use for context. Defaults to 3.
+        """
+        self.model_name = os.getenv('MODEL_NAME')
         self.__chat_engine = vector_index.as_chat_engine(
             chat_mode=ChatMode.CONTEXT,
             system_prompt=SYSTEM_PROMPT,
@@ -25,12 +31,21 @@ class ResearchAgent:
         )
 
     @classmethod
-    def from_local_storage(cls, similarity_top_k: int = 3) -> "ResearchAgent":
-        _vector_index_path = os.getenv("VECTOR_INDEX_PATH")
+    def from_local_storage(cls, similarity_top_k: int = 3) -> 'ResearchAgent':
+        """method to load the vector index from the local storage using env variables.
+
+        Args:
+            similarity_top_k (int, optional): Number of nodes to use for the context. Defaults to 3.
+
+        Raises:
+            EnvironmentError: if vector index path is not set or does not exists.
+
+        Returns:
+            ResearchAgent
+        """
+        _vector_index_path = os.getenv('VECTOR_INDEX_PATH')
         if _vector_index_path is None or not os.path.exists(_vector_index_path):
-            raise EnvironmentError(
-                "valid `VECTOR_INDEX_PATH` is required load embeddings"
-            )
+            raise EnvironmentError('valid `VECTOR_INDEX_PATH` is required load embeddings')
 
         storage_ctx = StorageContext.from_defaults(persist_dir=_vector_index_path)
         vector_index = load_index_from_storage(
@@ -42,13 +57,28 @@ class ResearchAgent:
         return cls(vector_index=vector_index, similarity_top_k=similarity_top_k)
 
     def get_chat_engine(self) -> BaseChatEngine:
+        """get the chat engine to query the research paper.
+        used by streamlit and evaluator.
+
+        Returns:
+            BaseChatEngine defined chat engined in constructor.
+        """
         return self.__chat_engine
 
     def query(self, query: str, chat_history: ChatMemoryBuffer | None = None) -> t.Any:
+        """a method to quert chat engine with the query and chat history.
+        Useful when creating an API.
+
+        Args:
+            query (str): user query to ask the question from chatbot.
+            chat_history (ChatMemoryBuffer | None, optional): chat history for multi-turn chat. Defaults to None.
+
+        Returns:
+            t.Any: response from the chat engine.
+        """
         response = self.__chat_engine.chat(
             message=query,
             chat_history=chat_history.get() if chat_history is not None else None,
         )
-        self.chat_engine.reset()
 
         return response
